@@ -1,0 +1,1931 @@
+@font-face {
+    font-family: "AppFont";
+    src: url("fonts/light.woff");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "AppFont";
+    src: url("fonts/regular.woff");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "AppFont";
+    src: url("fonts/bold.woff");
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 180px) {
+    body {
+        font-size: 80%;
+    }
+}
+
+@media only screen and (min-width: 320px) {
+    body {
+        font-size: 90%;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    body {
+        font-size: 100%;
+    }
+}
+
+@media only screen and (min-width: 414px) {
+    body {
+        font-size: 110%;
+    }
+}
+
+html, div {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html {
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    font-family: "AppFont";
+}
+
+input, textarea, img, select, button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-appearance: none;
+    -webkit-outline: none;
+    -webkit-border: none;
+    outline: none;
+    border: none;
+}
+
+input:focus, textarea:focus, img:focus, div:focus, button:focus {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-appearance: none;
+    -webkit-outline: none;
+    -webkit-border: none;
+    outline: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+::-webkit-input-placeholder {
+    color: #666;
+}
+
+.white::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+:-ms-input-placeholder {
+    color: #666;
+}
+
+body, img {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    height: 1px;
+    border: 0px;
+    border-bottom: 1px solid #CCC;
+}
+
+#busyUIView {
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+}
+
+#busyUIView > #busyBlip {
+    position: absolute;
+    width: 3.5em;
+    height: 3.5em;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+}
+
+button {
+    width: 100%;
+    margin-top: 1.5em;
+    border: none;
+    color: #19a784;
+    /* background: #19a784; */
+    padding: 0.75em 0;
+    font: 600 1.2em "AppFont";
+    /* border-radius: 4em; */
+    position: relative;
+    text-transform: uppercase;
+}
+
+button > .icon {
+    height: 2em;
+    position: absolute;
+    left: 1em;
+    top: 0.9em;
+}
+
+button.black {
+    background: black;
+}
+
+a:link {
+    color: #E69751;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #DE995C;
+    text-decoration: none;
+}
+
+a:active {
+    color: #E69751;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #E69751;
+    text-decoration: none;
+}
+
+/* MODAL VIEW */
+
+#modalUIView {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+}
+
+#modalUIView.hidden {
+    display: none;
+    width: 1;
+    height: 1;
+}
+
+#modalUIViewContainer {
+    color: #424242;
+    position: absolute;
+    width: 90%;
+    left: 0;
+    right: 0;
+    bottom: 1em;
+    margin: auto;
+    background: white;
+    padding: 1.75em;
+    box-sizing: border-box;
+    border-radius: 1em;
+    text-align: center;
+}
+
+#modalUIViewContainer .title {
+    font-size: 1.5em;
+    padding: 0.5 0 1em;
+    font-weight: 600;
+}
+
+#modalUIViewContainer .message {
+    font-size: 1.15em;
+}
+
+#modalUIViewContainer .image {
+    width: 80%;
+    margin-bottom: 1.5em;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 5.6em;
+    margin: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 0;
+    /* padding: 0 0.5em 0 0.9em; */
+    /* background: #F8F8F8; */
+    /* color: #000; */
+    /* border-bottom: 1px solid #DDDDDD; */
+    z-index: 2;
+}
+
+.header > .title {
+    width: 100%;
+    /* bottom: 0.69em; */
+    font: bold 1.2em "AppFont";
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    text-overflow: ellipsis;
+}
+
+.header > .imageTitle {
+    position: absolute;
+    height: 1.75em;
+    bottom: 0.75em;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.header > .left {
+    height: 2.2em;
+    bottom: 0.6em;
+    left: 0.35em;
+    position: absolute;
+    display: block;
+    z-index: 2;
+}
+
+.header > .right {
+    height: 2.2em;
+    bottom: 0.6em;
+    right: 0.6em;
+    position: absolute;
+    z-index: 2;
+
+}
+
+.header > .rightButton {
+    background: #2283F6;
+    position: absolute;
+    right: 0.7em;
+    bottom: 0.95em;
+    color: #FFFFFF;
+    padding: 0.45em 0.7em;
+    font-size: 0.75em;
+    font-weight: bold;
+    border-radius: 0.3em;
+    z-index: 2;
+}
+
+.header > .rightText {
+    font-size: 0.85em;
+    bottom: 1.1em;
+    right: 1.1em;
+    position: absolute;
+    z-index: 2;
+}
+
+.scrollUIComponent {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6.25em;
+    box-sizing: border-box;
+}
+
+.scrollUIView {
+    position: absolute;
+    height: 87%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 13%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scrollUIView.container {
+    padding: 1.5em;
+    box-sizing: border-box;
+}
+
+.scrollUIViewAbsolute {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.textBox {
+    font-family: 'AppFont';
+    font-size: 1.15em;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.75em 0;
+    background: none;
+    padding: 0.75em;
+    padding-left: 1.5em;
+    border-radius: 2em;
+    border: 0.1em solid #FFFFFF;
+}
+
+.textBox.select {
+    outline: none;
+    background-image: url('../images/icon_drop_arrow.svg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    color: #4A4A4A;
+    box-sizing: border-box;
+}
+
+.textBox.password {
+    -webkit-text-security: disc;
+}
+
+.textBox.white {
+    color: white;
+}
+
+.textBox.lowercase {
+    text-transform: lowercase;
+}
+
+.textBox.bold {
+    font-weight: bold;
+}
+
+.textBox.username {
+    position: relative;
+    padding-left: 2.1em;
+    z-index: 2;
+    text-transform: lowercase;
+    font-weight: bold;
+}
+
+.divider {
+    padding: 0.5em 0 1em;
+}
+
+.roundedTextBox {
+    width: 100%;
+    padding: 1em;
+    font-size: 1em;
+    font-family: "AppFont";
+    box-sizing: border-box;
+    border-radius: 2.5em;
+    background: white;
+    border: 1px solid #DDD;
+    margin-bottom: 0.75em;
+    box-shadow: 0 0.25em 0.75em 0 rgba(0, 0, 0, 0.08);
+}
+
+.roundedTextBox.area {
+    height: 6em;
+    border-radius: 0;
+    background: #f0f0f0;
+    border: none;
+    box-shadow: none;
+    margin-top: -0.75em;
+    padding: 1em 1.5em;
+}
+
+.center {
+    text-align: center;
+}
+
+#alertBoxUIElement {
+    position: absolute;
+    width: 97%;
+    padding: 2em 1em;
+    font-size: 1.05em;
+    color: #000000;
+    background: rgba(255, 255, 255, 0.95);
+    box-sizing: border-box;
+    border-radius: 1em;
+    left: 0;
+    right: 0;
+    bottom: 0.4em;
+    margin: auto;
+    z-index: 10000;
+    backdrop-filter: saturate(150%) blur(15px);
+    -webkit-backdrop-filter: saturate(150%) blur(15px);
+}
+
+.fullScreenUIView {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    /* background: #f9c441; */
+}
+
+.fullScreenUIView.white {
+    background: rgba(255, 255, 255, 0);
+    background: white;
+}
+
+.fullScreenUIView > .image {
+    position: absolute;
+    width: 15em;
+    top: 7em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+}
+
+.fullScreenUIView > .caption {
+    position: absolute;
+    font: normal 1.5em "AppFont";
+    padding: 1em;
+    box-sizing: border-box;
+    top: 11em;
+    z-index: 1;
+}
+
+.fullScreenUIView > .summary {
+    font: normal 0.9em;
+    margin-bottom: 2em;
+    z-index: 1;
+}
+
+.fullScreenUIView button {
+    width: 90%;
+    /* max-width: 400px; */
+    z-index: 1;
+}
+
+.fullScreenUIView > .footer {
+    width: 100%;
+    bottom: 2em;
+    z-index: 1;
+    position: absolute;
+}
+
+.fullScreenUIView .background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.fullScreenUIView .body {
+    /* height: 100%; */
+    text-align: center;
+    /* background: rgba(189, 44, 44, 0); */
+}
+
+.fullScreenPhotoUIElement {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.containerUIElement {
+    padding: 1.25em;
+    box-sizing: border-box;
+}
+
+.containerUIElement > .titleIcon {
+    width: 2.5em;
+    margin-bottom: 1em;
+}
+
+.permissionUIElement {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.permissionUIElement > .permissionUIButton {
+    display: inline-block;
+    width: 45%;
+    padding: 1.75em 0;
+    font-size: 0.8em;
+    font-weight: 600;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    color: #0f5779;
+}
+
+.circlePhotoUIContainer {
+    border-radius: 5em;
+    overflow: hidden;
+    position: relative;
+}
+
+.circlePhotoUIElement {
+    width: 100%;
+}
+
+/* ONBOARDING */
+
+#onboardingUIView {
+    overflow: hidden;
+    background: linear-gradient(45deg, #ff7676, #f54ea2, #48cfad, #4fc1e9, #4497ff, #ac92ec, #ec87c0, #ce4693, #0f5779, #19A784);
+    background-size: 2000% 2000%;
+    animation: onboardingBackground 20s ease infinite;
+    -webkit-animation: onboardingBackground 20s ease infinite;
+}
+
+@keyframes onboardingBackground {
+    0% {
+        background-position: 0% 100%
+    }
+    50% {
+        background-position: 100% 0%
+    }
+    100% {
+        background-position: 0% 100%
+    }
+}
+
+@-webkit-keyframes onboardingBackground {
+    0% {
+        background-position: 0% 100%
+    }
+    50% {
+        background-position: 100% 0%
+    }
+    100% {
+        background-position: 0% 100%
+    }
+}
+
+#onboardingUIViewContainer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.onboardingUIViewSlide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: inline-block;
+}
+
+.onboardingUIViewSlide > .onboardingUIViewSlideContextArea {
+    width: 95%;
+    position: absolute;
+    padding: 1.5em 1em 5em;
+    box-sizing: border-box;
+    bottom: 0;
+}
+
+.onboardingUIViewSlideContextArea > .caption {
+    font-size: 1.45em;
+    font-weight: bold;
+    padding-bottom: 0.15em
+}
+
+.onboardingUIViewSlideContextArea > .text {
+    width: 90%;
+    font-size: 1.25em;
+    padding-bottom: 0.5em;
+}
+
+.onboardingUIViewSlideContextArea > .button {
+    font-size: 1.35em;
+    font-weight: bold;
+    padding: 0.4em 0;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.onboardingUIViewSlideContextArea > .inputOverlay {
+    position: relative;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: -1.65em;
+    top: 2.4em;
+    left: 0.9em;
+    width: auto;
+    z-index: 0;
+}
+
+#interestBubbleContainer {
+    position: fixed;
+    padding-top: 2em;
+    width: 100%;
+    left: 0;
+    text-align: center;
+}
+
+.interestBubble {
+    display: inline-block;
+    width: 7em;
+    height: 7em;
+    font-size: 0.73em;
+    font-weight: 600;
+    color: #222;
+    background: linear-gradient(135deg, #FFF, rgba(255, 255, 255, 0.77));
+    padding-top: 2.85em;
+    margin: 0.2em 0.2em;
+    text-align: center;
+    border-radius: 7em;
+    box-sizing: border-box;
+    box-shadow: 0em 0.5em 0.3em rgba(0, 0, 0, 0.05);
+    text-transform: uppercase;
+}
+
+.interestBubble.selected {
+    color: #FFF;
+    background: linear-gradient(135deg, #E94FBE, #0B9BD0);
+    background-size: 135%;
+}
+
+.onboardingUIElementBubble {
+    position: absolute;
+    border-radius: 100%;
+    width: 3em;
+    height: 3em;
+    background: white;
+    box-sizing: border-box;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+#onboardingUIElementLogo {
+    position: fixed;
+    z-index: 1;
+    width: 6em;
+    left: 0;
+    right: 0;
+    bottom: 20em;
+    margin: auto;
+}
+
+#onboardingUIElementPreviousButton {
+    position: fixed;
+    width: 4em;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1000;
+}
+
+#onboardingUIElementBusyIndicator {
+    display: none;
+    background: white;
+    position: fixed;
+    width: 100%;
+    height: 0.25em;
+    bottom: 0;
+    z-index: 100;
+}
+
+.onboardingBusyAnimation {
+    animation: onboardingBusyAnimation 0.7s ease-in-out infinite;
+    -webkit-animation: onboardingBusyAnimation 0.7s ease-in-out infinite;
+}
+
+@keyframes onboardingBusyAnimation {
+    0% {
+        left: 0;
+        width: 0%;
+    }
+    50% {
+        left: 50%;
+        width: 50%
+    }
+    100% {
+        left: 0%;
+        width: 0%
+    }
+}
+
+@-webkit-keyframes onboardingBusyAnimation {
+    0% {
+        left: 0;
+        width: 0%;
+    }
+    50% {
+        left: 50%;
+        width: 50%
+    }
+    100% {
+        left: 0%;
+        width: 0%
+    }
+}
+
+.shake {
+    position: relative;
+    animation: shake 0.6s ease-in-out 1;
+    -webkit-animation: shake 0.6s ease-in-out 1;
+}
+
+@keyframes shake {
+    0% {
+        left: 0;
+    }
+    10% {
+        left: 2;
+    }
+    20% {
+        left: -4;
+    }
+    30% {
+        left: 6;
+    }
+    40% {
+        left: -4;
+    }
+    50% {
+        left: 3;
+    }
+    60% {
+        left: -2;
+    }
+    70% {
+        left: 1;
+    }
+    80% {
+        left: 0;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@-webkit-keyframes shake {
+    0% {
+        left: 0;
+    }
+    10% {
+        left: 2;
+    }
+    20% {
+        left: -4;
+    }
+    30% {
+        left: 6;
+    }
+    40% {
+        left: -4;
+    }
+    50% {
+        left: 3;
+    }
+    60% {
+        left: -2;
+    }
+    70% {
+        left: 1;
+    }
+    80% {
+        left: 0;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+.iconLabelButton {
+    margin: 0 2em 3em 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.iconLabelButton > .icon {
+    width: 4.5em;
+    height: 4.5em;
+    padding-bottom: 0.5em;
+}
+
+.iconLabelButton > .label {
+    font-size: 0.75em;
+    font-weight: 600;
+}
+
+#cameraResultUIElement {
+    z-index: 100;
+    display: none;
+    pointer-events: none;
+}
+
+#cameraResultUIElement.visible {
+    display: block;
+    pointer-events: auto;
+}
+
+#cameraResultUIBackgroundPhoto {
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.8);
+    background-position: center;
+    background-size: cover;
+}
+
+#cameraResultUIModal {
+    width: 14em;
+    height: 16em;
+    position: absolute;
+    top: 0;
+    bottom: 1em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    padding: 1em;
+    background-image: linear-gradient(45deg, #FF7676 0%, #F54EA2 100%);
+    border-radius: 1em;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+#cameraResultUIModal > #cameraResultUIPhotoContainer {
+    display: inline-block;
+    width: 6.25em;
+    height: 6.25em;
+    border: 0.2em solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 1em;
+}
+
+#cameraResultUIModal > hr {
+    border-bottom: 1px solid white;
+    opacity: 0.4;
+}
+
+#cameraResultUIModal > .button {
+    padding: 0.75em 0;
+}
+
+#onboardingWelcomeCaption {
+    font-size: 2.25em;
+    font-weight: bold;
+    padding: 1em 0.75em;
+    box-sizing: border-box;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 1em;
+}
+
+#onboardingWelcomeBody {
+    font-size: 1.9em;
+    padding: 1em 1.9em;
+    box-sizing: border-box;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 8em;
+}
+
+#onboardingWelcomeFooter {
+    font-size: 1.5em;
+    padding: 0.75em;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1.5em;
+    position: absolute;
+    width: 100%;
+    bottom: 4.5em;
+}
+
+.coinsAreaUIElement {
+    /* position: relative; */
+}
+
+.coinsAreaUIElement > .icon {
+    /* position: relative; */
+    height: 1.25em;
+}
+
+.coinsAreaUIElement > .balance {
+    /* position: relative; */
+    top: -0.27em;
+}
+
+.coinsAreaUIElement > .status {
+    position: relative;
+    top: -0.27em;
+}
+
+#floatingButtonArea {
+    position: fixed;
+    width: 100%;
+    z-index: 500;
+    display: none;
+    transform-style: preserve-3d;
+}
+
+#floatingButtonArea > .floatingButton {
+    width: 60px;
+    height: 60px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 30px;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 3px solid white;
+}
+
+#floatingButtonArea > .floatingButton.main {
+    transform-style: preserve-3d;
+}
+
+#floatingButtonArea > #floatingMenuButton {
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0em 0.5em 1em rgba(0, 0, 0, 0.15);
+}
+
+#floatingButtonArea > #floatingMenuButton > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 3;
+}
+
+#floatingButtonArea #floatingButtonClose {
+    transform: matrix(1, 0, 0, 1, 0, 60);
+}
+
+#floatingButtonArea > #floatingButtonShade {
+    position: absolute;
+    width: 100%;
+    height: 80;
+    bottom: -20;
+    opacity: .3;
+}
+
+/* PROFILE */
+
+#profileUIViewPersonal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.76);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: white;
+    z-index: 1;
+}
+
+#profileUIViewSelfieLevel {
+    margin-top: 2.5em;
+    flex-grow: 0;
+    position: relative;
+    /* left: 0; */
+    /* right: 0; */
+    /* top: 2.5em; */
+}
+
+.profileUIViewPhoto {
+    width: 7.5em;
+    height: 7.5em;
+    display: inline-block;
+    margin: 0 -0.46em;
+    box-sizing: border-box;
+    box-shadow: 0 0.75em 0.75em rgba(0, 0, 0, 0.15);
+}
+
+.badgeUIViewPhoto {
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    margin-left: -1em;
+    z-index: 10000000000;
+    display: inline-block;
+    margin: 0 -0 . em;
+    box-sizing: border-box;
+    box-shadow: 0 0.75em 0.75em rgba(0, 0, 0, 0.15);
+}
+
+.profileUIViewPhoto.ring {
+    margin-left: -0.7em;
+    margin-top: -0.25em;
+    width: 10em;
+    height: 10em;
+    position: absolute;
+    z-index: 2;
+    box-shadow: none;
+    pointer-events: none;
+    /*animation: 5s spin linear infinite;*/
+}
+
+.profileUIViewPhoto.selfie {
+    background: #F2E8DE;
+    z-index: 1;
+}
+
+.profileUIViewPhoto > .label {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.8em;
+    padding: 0.2em 0 1em;
+    text-align: center;
+    font-weight: 600;
+    width: 100%;
+    z-index: 100;
+    text-transform: uppercase;
+    background-image: linear-gradient(45deg, #FF9E32 0%, #FF5C00 80%);
+}
+
+#profileUIViewLevel {
+    width: 70%;
+    top: 15%;
+    left: 15%;
+    position: absolute;
+}
+
+#profileUIViewUsername {
+    /* position: relative; */
+    font-size: 1.65em;
+    font-weight: bold;
+    width: 100%;
+    /* top: 8em; */
+}
+
+#profileUIViewLevelTitle {
+}
+
+#profileUIViewCoinsArea {
+    font-size: 1.1em;
+    /* top: 14.65em; */
+}
+
+#profileUIViewActions {
+    position: relative;
+    /* top: 19em; */
+    /* left: 2.5%; */
+    /* width: 100%; */
+    padding: 1em;
+    text-align: center;
+    flex-grow: 1.5;
+}
+
+#profileUIViewActions > .button {
+    position: relative;
+    display: inline-block;
+    background: white;
+    border-radius: 0.3em;
+    text-align: center;
+    width: 27%;
+}
+
+#profileUIViewActions > .button > img {
+    position: absolute;
+    left: 0.2em;
+}
+
+#profileUIViewActions > .button.large {
+    background-image: linear-gradient(33deg, #FF7676 0%, #F54EA2 80%);
+    width: 100%;
+    margin-bottom: 5px;
+    height: 5.5em;
+}
+
+#profileUIViewActions > .button.badges {
+    background-image: linear-gradient(135deg, #ff5a00 0%, #ff7239 80%);
+    width: 48%;
+    margin: 0.15em 0.01em;
+    /* margin: 1em; */
+    height: 4.5em;
+    /* text-align: center; */
+    display: inline-block;
+}
+
+#profileUIViewActions > .button.arena {
+    background-image: linear-gradient(-135deg, #48CFAD 0%, #19A784 100%);
+    width: 49%;
+    margin: 0.01em;
+    height: 5em;
+}
+
+#profileUIViewActions > .button > .title {
+    position: absolute;
+    font-size: 0.9em;
+    width: 100%;
+    top: 0.8em;
+}
+
+#profileUIViewActions > .button > .caption {
+    position: absolute;
+    font-size: 1.3em;
+    font-weight: bold;
+    width: 100%;
+    top: 1.51em;
+}
+
+#profileUIViewActions > .button > .icon {
+    /* position: absolute; */
+    height: 2em;
+    /* bottom: 1.3em; */
+    /* left: 0.8em; */
+    /* right: 0; */
+    /* margin: 0.7em auto; */
+    display: block;
+}
+
+#profileUIViewActions > .button > .footer {
+    font-size: 0.85em;
+    /* position: absolute; */
+    /* bottom: 1.89em; */
+    /* width: 100%; */
+}
+
+.profileFooterButton {
+    /* position: absolute; */
+    /* bottom: 5em; */
+    /* left: 23%; */
+    text-align: center;
+}
+
+.profileFooterButton.right {
+    left: inherit;
+    right: 23%;
+}
+
+.profileFooterButton > .icon {
+    width: 2em;
+    margin-bottom: 0.5em;
+}
+
+.profileFooterButton > .label {
+    font-size: 0.70em;
+}
+
+#profileUIViewBalanceArea {
+
+    width: 100%;
+    text-align: center;
+
+}
+
+#profileUIViewBalanceArea > .label {
+    font-size: 0.85em;
+    padding-bottom: 0.5em;
+}
+
+#profileUIViewBalanceArea > #profileUIViewBalance {
+    font-size: 1.75em;
+    font-weight: 600;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+#profileUIViewArrow {
+    position: absolute;
+    width: 2em;
+    bottom: 2em;
+    left: 3em;
+}
+
+#profileUIViewMenu {
+    position: absolute;
+    width: 2em;
+    bottom: 2em;
+    right: 3em;
+}
+
+#infoUIView, #newGroupUIView, #addGroupUIView, #selectContacts {
+    border-radius: 2.5em 2.5em 0px 0px;
+}
+
+.overlayUIViewTitle {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    padding: 1.35em 0;
+    color: #4A4A4A;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    border-bottom: 1px solid #DDD;
+    z-index: 2;
+}
+
+#infoUIViewBubble {
+    position: absolute;
+    right: 1.25em;
+    top: 1.25em;
+    padding-top: 0.58em;
+    background: #ce4693;
+    color: white;
+    border-radius: 2em;
+    min-width: 2.5em;
+    height: 2.5em;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    z-index: 3;
+}
+
+#groupUIViewBubble {
+    position: absolute;
+    right: 1.25em;
+    top: 1.25em;
+    padding-top: 0.58em;
+    background: #ce4693;
+    color: white;
+    border-radius: 2em;
+    min-width: 2.5em;
+    height: 2.5em;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    z-index: 3;
+}
+
+#infoUIViewContent, #friendsUIViewContent {
+    text-align: center;
+    height: 95%;
+    /* overflow-y: auto; */
+    /* background: #f2f2f2; */
+    z-index: 5;
+}
+
+#infoUIViewContent.padded {
+    padding-top: 1em;
+}
+
+.infoUIListItem {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 1.25em 0;
+    border-bottom: 1px solid #CCC;
+}
+
+.infoUIListItem.highlight {
+    background: #f16c65;
+    color: white;
+    font-weight: bold;
+}
+
+.infoUIListItem.shy {
+    opacity: 0.5;
+}
+
+.infoUIListItem > .icon {
+    width: 3em;
+    height: 3em;
+    padding: 1em;
+    margin-bottom: 0.75em;
+    background: #f2e8de;
+    border: 0.5em solid #eaccad;
+    border-radius: 5em;
+    box-sizing: padding-box;
+    display: inline-block;
+}
+
+.infoUIListItem > .icon.highlight {
+    width: 6em;
+    height: 6em;
+    background: #ffc489;
+    border-radius: 12em;
+    border: none;
+}
+
+.infoUIListItem > .title {
+    top: 1.2em;
+    font-size: 1.75em;
+}
+
+.infoUIListItem > .subtitle {
+    font-size: 1em;
+    font-weight: bold;
+    color: #ce2484;
+}
+
+.infoUIListItem > .subtitle.highlight {
+    color: #ffffff;
+}
+
+.infoUIGroup {
+    position: relative;
+    padding: 1em;
+    box-sizing: border-box;
+    border-bottom: 1px solid #CCC;
+    text-align: left;
+    height: 6.75em;
+}
+
+.infoUIGroup > .icon {
+    width: 4.5em;
+    height: 4.5em;
+    position: absolute;
+    border-radius: 4em;
+}
+
+.infoUIGroup > .context {
+    position: absolute;
+    left: 6.5em;
+    top: 1em;
+    max-width: 60%;
+}
+
+.infoUIGroup .title {
+    padding-top: 0.55em;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.infoUIGroup .comment {
+    font-size: 0.875em;
+    color: #666;
+}
+
+/* LEVELS */
+
+.levelShell {
+    background-size: contain;
+    background-image: url(../images/element_shell.png);
+    background-repeat: no-repeat;
+    border: none;
+    z-index: 5;
+}
+
+/* BADGES */
+
+.badge {
+    display: inline-block;
+    width: 30%;
+    margin: 0 1% 1em;;
+    text-align: center;
+}
+
+.badge > .icon {
+    width: 5em;
+    margin-bottom: 0.5em;
+}
+
+.badge > .label {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* CIRCLES */
+
+.circle {
+    box-sizing: border-box;
+    border: 0.12em solid #DDD;
+    color: #666;
+    font-size: 0.85em;
+    font-weight: 600;
+    border-radius: 3em;
+    height: 6em;
+    width: 6em;
+    display: inline-block;
+    margin: 0.25em;
+    padding-top: 2.3em;
+    text-transform: uppercase;
+}
+
+.circle.selected {
+    background: #CE4693;
+    border-color: #CE4693;
+    color: white;
+}
+
+/* MULTI-TAB VIEW */
+
+.multiTabUIHeader {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background: #CE4693; */
+    color: #131212;
+    position: relative;
+    text-align: center;
+    font-weight: lighter;
+    /* left: 0; */
+    /* margin: auto; */
+    /* right: 0; */
+    /* padding-top: 2em; */
+    /* display: flex; */
+    align-items: center;
+}
+
+.multiTabUIHeader > .photo {
+    width: 3.2em;
+    height: 3.2em;
+    position: absolute;
+    border-radius: 3.5em;
+    /* margin-bottom: 0.75em; */
+    left: 0.2em;
+    top: 0.2em;
+    /* padding: 0.5em; */
+}
+
+.multiTabUIHeader > .title {
+    font-size: 1.25em;
+    font-weight: normal;
+    position: absolute;
+    /* top: 60%; */
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 0.6em;
+    /* padding: 0 2em 0.15em; */
+    width: 100%;
+    text-transform: capitalize;
+    /* height: 100%; */
+    /* align-content: center; */
+    /* right: 0; */
+    /* text-align: center; */
+    /* left: 0; */
+    /* position: relative; */
+    /* box-sizing: border-box; */
+}
+
+.multiTabUIHeader > .subtitle {
+    font-size: 0.8em;
+}
+
+.multiTabUILabels {
+    position: absolute;
+}
+
+.multiTabUILabels > .label {
+    color: #4A4A4A;
+}
+
+.box-in {
+    width: 58%;
+    min-height: 15px;
+    position: relative;
+    background: #DD69C7;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    margin-top: 8%;
+    padding: 5px 5px 15px 20px;
+}
+
+.box-in:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0px;
+    right: auto;
+    top: auto;
+    bottom: -10px;
+    border: 12px solid;
+    border-color: transparent transparent transparent #DD69C7;
+}
+
+.box-out {
+    width: 58%;
+    min-height: 13vh;
+    position: relative;
+    border-radius: 10px;
+    background: #90A4AE;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    left: 33%;
+    margin-top: 10%;
+    padding: 5px 10px 5px 10px;
+}
+
+.box-out:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: -10px;
+    border: 9px solid;
+    border-color: #90A4AE #90A4AE transparent transparent;
+}
+
+.time {
+    position: absolute;
+    right: 10px;
+    /* width: 100%; */
+    font-size: 10px;
+}
+
+.type-msg {
+    background: #FFFFFF;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.12);
+    font-size: 16px;
+    color: #9B9B9B;
+    letter-spacing: -0.18px;
+    position: relative;
+    margin-top: 25%;
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+.img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    top: 40px;
+    position: relative;
+}
+
+.chatBox {
+    height: 90%;
+    display: flex;
+    position: relative;
+    padding: 0.5em 0 0.5em 0;
+    /* flex: 1 1 70%; */
+    /* flex-wrap: wrap; */
+    /* align-items: flex-start; */
+    /* align-content: flex-start; */
+    /* overflow: auto; */
+}
+
+.messageBox {
+    background: #ffffff;
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    /* height: 87px; */
+    /* max-height: 300px; */
+    display: flex;
+    padding: 5px;
+    border-top: 1px solid rgba(128, 128, 128, 0.17);
+    /* border-bottom: 1px solid rgba(128, 128, 128, 0.17); */
+    flex-basis: 90%;
+    z-index: 1000;
+}
+
+.messageBox > input {
+    width: 100%;
+    padding: 0.6em;
+    font-weight: 100;
+    font-size: 1em;
+}
+
+.messageBox > div {
+    flex-basis: 10%;
+    margin-right: 5px;
+}
+
+.messageBox > div > img {
+    width: 2.5em;
+    padding: 0.2em;
+}
+
+.textarea-container {
+    position: relative;
+    /* you should change this*/
+    width: 90%;
+    flex-basis: 90%;
+    /* height: 100%; */
+}
+
+.messageBox > textarea, .textarea-size {
+    /* min-height: 40px; */
+    /* need to manually set font and font size */
+    /* font-family: sans-serif; */
+    font-size: 14px;
+    font-weight: 100;
+    box-sizing: border-box;
+    padding: 0.6em;
+    /* border: 1px solid; */
+    overflow: hidden;
+    width: 100%;
+}
+
+.messageBox > textarea {
+    border: 1px solid grey;
+    border-radius: 20px;
+    flex-basis: 74%;
+    /* columns: 1; */
+    /* height: 100%; */
+    font-size: 0.9em;
+    padding: 0.9em;
+    overflow: auto;
+    /* position: relative; */
+    resize: none;
+    font-family: inherit;
+    /* white-space: normal; */
+}
+
+.textarea-size {
+    visibility: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word
+}
+
+.menuPhotoUIElement {
+    border-radius: 50%;
+    position: relative;
+    width: 3em;
+    padding: 0.3em;
+    /* margin: auto; */
+    /* left: 0; */
+    /* right: 0; */
+    /* width: 60%; */
+}
+
+#groupInfoUIViewSelfieLevel {
+    /* position: absolute; */
+    /* left: 0; */
+    /* right: 0; */
+    /* margin-top: 2.5em; */
+    /* top: 2.5em; */
+}
+
+.bt {
+    position: absolute;
+    right: 0.6em;
+    top: 2em;
+}
+
+.coinsArea {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-grow: 0.5;
+}
+
+.footerButtons {
+    width: 100%;
+    /* align-items: center; */
+    position: relative;
+    bottom: 6em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+}
+
+.inline-btn {
+    margin-left: 15px;
+    position: relative;
+}
+
+.inline-btn > img {
+    float: left;
+    width: 3em;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+
+    background: white;
+    border-radius: 0.3em;
+    text-align: center;
+}
+
+.foot {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#profileUIContainer {
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* background: white; */
+}
+
+#profileUIViewCardArea {
+    /*position: absolute;*/
+    top: 6em;
+    width: 100%;
+    height: 12em;
+}
+
+.add-card-btn {
+    background-image: linear-gradient(44deg, #ff1e8b 0%, #e92391 100%);
+    box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    color: white !important;
+    width: 80%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.add-money-btn {
+    background-image: linear-gradient(-153deg, #0095ff 0%, #1f86f3 100%);
+    box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    width: 80%;
+    /* background: #454cc0; */
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white !important;
+}
+
+#profileUIViewBtnArea {
+    /*position: absolute;*/
+    top: 18em;
+    width: 100%;
+    color: white;
+}
+
+#profileUIViewAccount {
+    height: 100%;
+    /* background: white; */
+}
+
+.flexContainerColumn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    justify-content: space-between;
+}
+
+.profileUIViewAccount {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    justify-content: space-around;
+}
+
+.credit-card {
+    text-align: center;
+}
+
+.profileUIViewCards {
+    width: 80%;
+    /*position: absolute;*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 100%;
+}
+
+.card-img {
+    width: 80%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 9px 12px;
+    padding-top: 7px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #5e5e5e;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #d1dade;
+    -webkit-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border: none;
+    text-shadow: none;
+    box-shadow: none;
+    text-transform: uppercase;
+    transition: all 0.12s linear 0s !important;
+
+}
+
+.actionButtons {
+    position: absolute;
+    bottom: 0.3em;
+    left: 0;
+    right: 0;
+}
+
+.actionButtons > img {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.profileUIViewSettings {
+
+}
+
+.flexContainerColumn > .heading {
+    font-size: 1em;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+    text-align: start;
+    padding: 0.5em;
+}
+
+.profileUIViewBarcodeArea {
+    align-items: center;
+    align-content: center;
+}
+
+.profileUIViewBarcodeArea > img {
+    width: 70%;
+}
+
+.profileUIViewBarcodeAction {
+    display: inline;
+}
+
+.habari {
+    background: transparent;
+    /* padding: 1em; */
+    width: 5em;
+    position: absolute;
+    top: 3.5em;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    margin: auto;
+    z-index: 1;
+    display: inline-block;
+    -moz-box-shadow: -1px -1px 8px 6px rgba(0, 0, 0, 0.38);
+    -webkit-box-shadow: -1px -1px 8px 6px rgba(0, 0, 0, 0.38);
+    box-shadow: -1px -1px 8px 6px rgba(0, 0, 0, 0.38);
+}
+
+.habari > img {
+    width: 100%;
+}
+
+.pup {
+
+    background-image: linear-gradient(135deg, #A64596 0%, #9B408B 80%) !important;
+}
+
+.pnk {
+    background-image: linear-gradient(135deg, #F83176 0%, #db2f6d 80%) !important;
+}
+
+.org {
+    background-image: linear-gradient(95deg, #10bc9d 0%, #0ed0aa 80%) !important;
+}
+
+.altn {
+
+    background-image: linear-gradient(180deg, #ff6f3e 0%, #d45f35 80%) !important;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.inner > img {
+    width: 2em;
+}
+
+.inner .footer {
+    font-size: 0.82em;
+}
+#profileUIStatus {
+    font-style: italic;
+    size: 0.4em;
+    margin-top: 10px;
+}
