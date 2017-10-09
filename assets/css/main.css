@@ -195,7 +195,7 @@ body {
 
 .banner-img {
     object-fit: cover;
-    position: absolute;
+    /* position: absolute;*/
 }
 
 .banner-text-main {
@@ -368,8 +368,8 @@ body {
     color: #9B9B9B;
     letter-spacing: 0;
     margin-bottom: 20px;
-    padding: 0 2%;
-    font-style: oblique;
+    /*padding: 0 2%;*/
+    font-style: italic;
 }
 
 .select-movies::before {
@@ -413,7 +413,8 @@ select#cinema option[value="default"] {
     background: #FFFFFF;
     border-radius: 16px;
     height: 344px;
-    width: 450px;
+    /*width: 450px;*/
+    width: 36%;
     margin-right: 10px;
 }
 
@@ -490,7 +491,7 @@ select#cinema option[value="default"] {
     color: #666666;
     letter-spacing: 0;
     padding: 7px;
-    font-style: oblique;
+    font-style: italic;
 }
 
 .cast {
@@ -524,7 +525,7 @@ select#cinema option[value="default"] {
     font-size: 23px;
     color: #30EBFF;
     letter-spacing: 0;
-    font-style: oblique
+    font-style: italic;
 }
 
 .movie-primus {
@@ -650,11 +651,11 @@ select#cinema option[value="default"] {
 }
 
 .top {
-    margin-top: 7%;
+    top: 40%;
 }
 
 .roti-img {
-    margin-top: 14%;
+    top: 80%;
     width: 25%;
     height: 282px;
     position: absolute;
@@ -704,6 +705,9 @@ select#cinema option[value="default"] {
     .movie-content {
         margin-top: 45%;
     }
+    .app-img {
+        height: 390px;
+    }
 }
 
 @media screen and (max-width:1024px) and (min-width: 768px) {
@@ -725,6 +729,18 @@ select#cinema option[value="default"] {
     }
     .banner-btn {
         top: 50%;
+    }
+    .movie-container {
+        width: 50%;
+    }
+    .bubble-container {
+        width: 65%;
+        margin: auto;
+        padding-top: 3%;
+    }
+    .select-movies {
+        left: 65%;
+        width: 30%;
     }
 }
 
