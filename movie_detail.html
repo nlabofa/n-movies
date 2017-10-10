@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>movie-detail</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="first-header">
+        <div class="container flex row ">
+            <div class="logo"><img src="assets/img/logo.svg" alt=""></div>
+            <div class="name">
+                <div class="usr-name">Funmilayo</div>
+                <div class="usr-img">
+                    <img src="assets/img/usr-img.png" alt="" width=35px class="usr-img-con">
+                    <img src="assets/img/medal.svg" alt="" class="medal">
+                </div>
+                <div class="menu-select"><img src="assets/img/select-menu.svg" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="sec-header">
+        <div class="sec-header-body flex row">
+            <div class="sub-head">
+                Subscriptions
+                <img src="assets/img/active.svg" alt="" class="active">
+            </div>
+            <div class="all-trail"> All Trailers
+                <img src="assets/img/watch.svg" alt="" class="icon">
+            </div>
+        </div>
+    </div>
+    <div class="trailer-banner">
+        <img src="assets/img/trailer.png" class="banner-img" alt="" width=100% height=100%>
+        <div class="trailer-btn">
+            <img src="assets/img/play.svg" alt="" class="play-svg">
+        </div>
+    </div>
+    <div class="content">
+        <div class="container-main flex column">
+            <div class="grid-12 content-head flex column rel">
+                <div class="showing-cinema">Showing at Filmhouse, Lekki</div>
+                <div class="select-movies">
+                    <select name="" id="cinema">
+                        <option value="default">
+                            Select Your prefered Cinema...</option>
+                        <option value="Genesis">Genesis</option>
+                        <option value="Genesis">Genesis</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex rel">
+                <div class="trailer-container flex">
+                    <div class="coverimg-width">
+                        <img src="assets/img/trailer-img.png" alt="" class="trailer-img">
+                    </div>
+                    <div class="cover-width trailer-width">
+                        <div class="trailer-title">John Wick: Part 2</div>
+                        <div class="trailer-info flex ">
+                            <p>qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                        </div>
+                        <div class="trailer-starring flex">
+                            Starring: Tom Cruise, Sarah Sams, Domhnall Gleeson, Jayma Mays, Jesse Plemons,Mays, Jesse Plemons, Mays, Jesse Plemons
+                        </div>
+                        <div class="category detail flex ">
+                            <div class="age-bracket">PG 13</div>
+                            <div class="genre white">Crime, Drama</div>
+                        </div>
+                        <div class="social-btn flex row">
+                            <div class="rel">
+                                <img src="assets/img/like.svg" alt="" width="80%">
+                                <img src="assets/img/like-abs.svg" alt="" class="like-abs">
+                            </div>
+                            <div class="rel">
+                                <img src="assets/img/rated.png" alt="" width="80%">
+                                <div class="share-abs-text black">RATED</div>
+                                <div class="share-abs-text black-24">16</div>
+                            </div>
+                            <div class="rel">
+                                <img src="assets/img/share.png" alt="" width="80%">
+                                <div class="share-abs-text">SHARE</div>
+                                <img src="assets/img/share-abs.svg" alt="" class="share-abs">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="download-app">
+                    <img src="assets/img/download-app.png" alt="" class="app-img">
+                </div>
+            </div>
+            <div class="choose-movie rel">
+                <select name="" id="cinema">
+                    <option value="default">
+                        Wednesday, Nov 8</option>
+                    <option value="Genesis">Genesis</option>
+                    <option value="Genesis">Genesis</option>
+                </select>
+                <img src="assets/img/clock.svg" alt="" class="clock-svg">
+                <img src="assets/img/arrow.svg" alt="" class="arrow-svg">
+            </div>
+            <div class="show-time-content rel">
+                <div class="show-time">
+                    <div class="show-time-container">
+                        <div class="show-time-div flex row">
+                            <div class="time-show">3.30pm</div>
+                            <div class="bar">Standard</div>
+                            <div class="price">NGN 1,000</div>
+                        </div>
+                        <div class="show-time-div flex row">
+                            <div class="time-show">3.30pm</div>
+                            <div class="bar">IMAX 3D</div>
+                            <div class="price">NGN 1,000</div>
+                        </div>
+                        <div class="show-time-div flex row">
+                            <div class="time-show">3.30pm</div>
+                            <div class="bar">Signature</div>
+                            <div class="price">NGN 1,000</div>
+                        </div>
+                        <div class="show-time-div lst flex row">
+                            <div class="time-show">3.30pm</div>
+                            <div class="bar">Standard</div>
+                            <div class="price">NGN 1,000</div>
+                        </div>
+                    </div>
+                    <div class="show-time-container-price rel">
+                        <div class="show-time-div flex row">
+                            <div class="label">ADULT</div>
+                            <div class="bar-price">NGN 1,000</div>
+                            <div class="reduce rel"><img src="assets/img/reduce.svg" alt="" width="80%"><span>-</span></div>
+                            <div class="count" id="increase-c">0</div>
+                            <div class="increase rel" id="increase" onclick="app.incrementBy1()"><img src="assets/img/reduce.svg" alt="" width="80%"><span>+</span></div>
+                        </div>
+                        <div class="show-time-div flex row">
+                            <div class="label">STUDENT</div>
+                            <div class="bar-price">NGN 0</div>
+                            <div class="reduce rel"><img src="assets/img/reduce.svg" alt="" width="80%"><span>-</span></div>
+                            <div class="count">0</div>
+                            <div class="increase rel"><img src="assets/img/reduce.svg" alt="" width="80%"><span>+</span></div>
+                        </div>
+                        <div class="show-time-div flex row">
+                            <div class="label">CHILD</div>
+                            <div class="bar-price">NGN 0</div>
+                            <div class="reduce rel"><img src="assets/img/reduce.svg" alt="" width="80%"><span>-</span></div>
+                            <div class="count">0</div>
+                            <div class="increase rel"><img src="assets/img/reduce.svg" alt="" width="80%"><span>+</span></div>
+                        </div>
+                        <div class="show-time-div flex row">
+                            <div class="label">GROUP</div>
+                            <div class="bar-price">NGN 0</div>
+                            <div class="reduce rel"><img src="assets/img/reduce.svg" alt="" width="80%"><span>-</span></div>
+                            <div class="count">5</div>
+                            <div class="increase rel"><img src="assets/img/reduce.svg" alt="" width="80%"><span>+</span></div>
+                        </div>
+                    </div>
+                    <div class="advert">
+                        <img src="assets/img/roti.png" alt="" class="detail-img">
+                    </div>
+                    <div class="advert">
+                        <img src="assets/img/ceo.png" alt="" class="detail2-img">
+                    </div>
+                </div>
+            </div>
+
+            <form action="" class="input-form column">
+                <div class="flex row form-group">
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                </div>
+                <div class="flex row form-group">
+                    <input type="telephone" placeholder="Phone Number">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="buy-btn flex row">
+                    <div>Buy Now</div>
+                    <div class="font-14">NGN 3000</div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="assets/js/main.js "></script>
+
+</html>

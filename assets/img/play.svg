@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="132px" height="132px" viewBox="0 0 132 132" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>play</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Movies" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-657.000000, -312.000000)">
+            <g id="Group-2" transform="translate(0.000000, 45.000000)">
+                <g id="play" transform="translate(657.000000, 267.000000)">
+                    <circle id="Oval-3-Copy" fill="#07B970" fill-rule="evenodd" opacity="0.300000012" cx="66" cy="66" r="66"></circle>
+                    <circle id="Oval-3" fill="#07B970" fill-rule="evenodd" opacity="0.800000012" cx="66" cy="66" r="53.1666667"></circle>
+                    <path d="M83.2078239,67.6778926 L58.0881012,83.9657901 L58.0881012,83.9657901 C57.1613095,84.5667318 55.9228368,84.3025781 55.3218952,83.3757864 C55.1117987,83.0517689 55,82.6738561 55,82.2876853 L55,49.7118903 L55,49.7118903 C55,48.6073208 55.8954305,47.7118903 57,47.7118903 C57.3861708,47.7118903 57.7640836,47.823689 58.0881012,48.0337855 L83.2078239,64.3216829 L83.2078239,64.3216829 C84.1346156,64.9226246 84.3987693,66.1610972 83.7978276,67.087889 C83.6448277,67.3238503 83.4437853,67.5248927 83.2078239,67.6778926 Z" id="Triangle" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

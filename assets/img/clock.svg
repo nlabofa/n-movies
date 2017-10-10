@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Movies" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-68.000000, -1274.000000)" fill-rule="nonzero" fill="#000000">
+            <g id="Date" transform="translate(53.000000, 1252.000000)">
+                <path d="M25,22 C19.4860674,22 15,26.4858427 15,32 C15,37.5141573 19.4860674,42 25,42 C30.5139326,42 35,37.5141573 35,32 C35,26.4858427 30.5139326,22 25,22 Z M25,41 C20.0374684,41 16,36.9625316 16,32 C16,27.0374684 20.0374684,23 25,23 C29.9625316,23 34,27.0374684 34,32 C34,36.9625316 29.9625316,41 25,41 Z M25.4067797,25 C25.0790847,25 24.8135593,25.2475185 24.8135593,25.5529903 L24.8135593,31.8940194 L19.5932203,31.8940194 C19.2655254,31.8940194 19,32.1415379 19,32.4470097 C19,32.7524815 19.2655254,33 19.5932203,33 L25.4067797,33 C25.7344746,33 26,32.7524815 26,32.4470097 L26,25.5529903 C26,25.2477397 25.7344746,25 25.4067797,25 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
